@@ -42,12 +42,11 @@
   </ul>
 
   <h2>Data stored in your account (only if you sign in)</h2>
-  <p>Signing in is optional. If you sign in with Google to use backup, sync or a family circle, we store:</p>
+  <p>Signing in is optional. If you sign in with Google, we store your email address and a Google account identifier. If you have Plus and use backup and sync, or join a family circle, we also store:</p>
   <ul>
-    <li>Your <strong>email address</strong> and a <strong>Google account identifier</strong>, to sign you in.</li>
-    <li>Your <strong>prayer marks</strong> (prayed on time, late or missed), <strong>qada list</strong>, <strong>Quran reading progress</strong>, bookmarks and app settings, so they can be restored and synced between your devices.</li>
+    <li>Your <strong>prayer marks</strong> (prayed on time, late or missed), <strong>qada list</strong>, <strong>Quran reading progress</strong>, bookmarks and app preferences (such as calculation method and alert settings), so they can be restored and synced between your devices.</li>
   </ul>
-  <p><strong>Excused days</strong> are also backed up, but <strong>encrypted on your phone before they leave it</strong>, with a key kept in your own Google account. We store only the encrypted data and cannot read it.</p>
+  <p><strong>Excused days</strong> are also backed up, but <strong>encrypted on your phone before they leave it</strong> (AES-256). The key never reaches our servers: it is kept on your phone and, where your phone supports end-to-end encrypted Google backup, in that backup. We store only the encrypted data and cannot read it. Because we never have the key, we cannot recover these days for you: a new phone can read them only if it is restored from your previous phone’s Google backup. If your phone can’t store the key securely, excused days are not backed up at all.</p>
   <p>Your location is never part of this.</p>
 
   <h2>Family circles</h2>
@@ -68,7 +67,7 @@
         <tr><td>RevenueCat</td><td>Subscription status</td><td>App user ID, purchase records</td></tr>
         <tr><td>Supabase</td><td>Sign-in, backup and sync (optional)</td><td>Email, account ID, synced data listed above</td></tr>
         <tr><td>Google Firebase</td><td>Crash reports; family reminders</td><td>Crash details; device notification token</td></tr>
-        <tr><td>Cloudflare</td><td>Hosting this website</td><td>Standard server logs</td></tr>
+        <tr><td>GitHub Pages</td><td>Hosting this website</td><td>Standard server logs</td></tr>
       </tbody>
     </table>
   </div>
@@ -76,7 +75,7 @@
 
   <h2>Your choices and rights</h2>
   <ul>
-    <li><strong>Delete your account</strong> from the Me screen in the app. This permanently deletes your account and everything stored with it on our servers.</li>
+    <li><strong>Delete your account</strong> from the Me screen in the app. This permanently deletes your account and everything stored with it on our servers, and your customer record at RevenueCat. Subscriptions are managed by Google Play: cancel them there.</li>
     <li><strong>Delete data on your phone</strong> by clearing the app’s storage or uninstalling it.</li>
     <li><strong>Location</strong> can be switched off for Adahly in your phone’s settings at any time; the app keeps working with a city you choose.</li>
     <li>To access, correct or delete your data, or for any privacy question, email <a href="mailto:hello@adahly.com">hello@adahly.com</a>. We reply within 30 days.</li>
