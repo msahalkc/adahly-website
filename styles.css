@@ -215,6 +215,14 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 18px; }
 
 @media (max-width: 520px) {
   .streak-tile { display: none; }
+  .panel { padding: 20px; }
+  .week { gap: 4px; }
+  .day { font-size: 11px; letter-spacing: -0.02em; }
+}
+@media (max-width: 360px) {
+  .panel { padding: 16px; }
+  .week { gap: 3px; }
+  .day { font-size: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; }
