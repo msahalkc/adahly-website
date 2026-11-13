@@ -42,18 +42,21 @@
   </ul>
 
   <h2>Data stored in your account (only if you sign in)</h2>
-  <p>Signing in is optional. If you sign in with Google, we store your email address, the name and profile picture link from your Google profile, and an account identifier. If you have Plus and use backup and sync, or join a family circle, we also store:</p>
+  <p>Signing in is optional. If you sign in with Google, we store your email address, the name and profile picture link from your Google profile, and an account identifier.</p>
+  <p>Signed-in phones back up and sync your <strong>prayer marks</strong>, <strong>qada list</strong>, <strong>Quran reading progress</strong>, <strong>Ramadan fasts and taraweeh marks</strong>, <strong>excused days</strong>, bookmarks and app preferences (such as calculation method and alert settings). <strong>All of it is encrypted on your phone before it leaves it</strong> (AES-256), end to end:</p>
   <ul>
-    <li>Your <strong>prayer marks</strong> (prayed on time, late or missed), <strong>qada list</strong>, <strong>Quran reading progress</strong>, <strong>Ramadan fasts and taraweeh marks</strong>, bookmarks and app preferences (such as calculation method and alert settings), so they can be restored and synced between your devices.</li>
+    <li>The key never reaches our servers. It is kept on your phone and in your Google account’s end-to-end encrypted backup, which Google can’t read either.</li>
+    <li>We store only encrypted data, plus the time each item last changed. We can’t read what you marked, which prayers or days it concerns, or your preferences.</li>
+    <li>Because we never have the key, we can’t recover your data for you: a new phone can read it only if it is restored from your previous phone’s Google backup.</li>
+    <li>If your phone can’t keep the key in end-to-end encrypted backup (for example, it has no screen lock), nothing is synced and everything stays on your phone.</li>
   </ul>
-  <p><strong>Excused days</strong> are also backed up, but <strong>encrypted on your phone before they leave it</strong> (AES-256). The key never reaches our servers: it is kept on your phone and, where your phone supports end-to-end encrypted Google backup, in that backup. We store only the encrypted data and cannot read it. Because we never have the key, we cannot recover these days for you: a new phone can read them only if it is restored from your previous phone’s Google backup. If your phone can’t store the key securely, excused days are not backed up at all.</p>
   <p>Your location is never part of this.</p>
 
   <h2>Family circles</h2>
-  <p>If you join a family circle, the other members can see only a <strong>daily summary</strong>: how many of today’s prayers you have marked as prayed and whether you met your Quran goal. They cannot see your prayer times, individual marks, excused days, qada list or location. You can hide your summary or leave the circle at any time. To send reminders (“nudges”) between members, we store a notification token for your device.</p>
+  <p>Family circles are not available yet. When they are, joining one will be your choice, and the other members will see only a <strong>daily summary</strong> you choose to share: how many of today’s prayers you have marked as prayed and whether you met your Quran goal. They cannot see your prayer times, individual marks, excused days, qada list or location. You can hide your summary or leave the circle at any time. To send reminders (“nudges”) between members, we store a notification token for your device.</p>
 
   <h2>Purchases</h2>
-  <p>Subscriptions are sold through Google Play. Google handles payment; we never see your card details. We use RevenueCat to check which plan you have. RevenueCat receives an anonymous app user ID (or your account ID if you sign in) and your purchase records from Google Play.</p>
+  <p>Every feature is free. If you choose to support Adahly, payment goes through Google Play. Google handles payment; we never see your card details. We use RevenueCat to record your support so the app can thank you. RevenueCat receives an anonymous app user ID (or your account ID if you sign in) and your purchase records from Google Play.</p>
 
   <h2>Crash reports</h2>
   <p>When the app crashes, Firebase Crashlytics sends a technical report: the error, device model, Android version and app version. It contains no personal information. We use it only to fix bugs.</p>
@@ -64,8 +67,8 @@
       <thead><tr><th>Provider</th><th>Purpose</th><th>Data</th></tr></thead>
       <tbody>
         <tr><td>Google Play</td><td>App distribution and payments</td><td>Purchase records</td></tr>
-        <tr><td>RevenueCat</td><td>Subscription status</td><td>App user ID, purchase records</td></tr>
-        <tr><td>Supabase</td><td>Sign-in, backup and sync (optional)</td><td>Email, name, account ID, synced data listed above</td></tr>
+        <tr><td>RevenueCat</td><td>Support purchases (optional)</td><td>App user ID, purchase records</td></tr>
+        <tr><td>Supabase</td><td>Sign-in, backup and sync (optional)</td><td>Email, name, account ID, and synced data in encrypted form only</td></tr>
         <tr><td>Google Firebase</td><td>Crash reports; family reminders</td><td>Crash details; device notification token</td></tr>
         <tr><td>GitHub Pages</td><td>Hosting this website</td><td>Standard server logs</td></tr>
       </tbody>
@@ -87,11 +90,11 @@
     <li><strong>In the app:</strong> open the <strong>Me</strong> tab, then <strong>Delete account</strong>, and confirm. Deletion happens straight away.</li>
     <li><strong>Without the app:</strong> email <a href="mailto:hello@adahly.com?subject=Delete%20my%20Adahly%20account">hello@adahly.com</a> from the Google account you signed in with, with the subject “Delete my Adahly account”. We delete it within 30 days and confirm by email.</li>
   </ul>
-  <p><strong>What is deleted:</strong> your account (email, name, account ID), everything backed up or synced with it (prayer marks, qada list, Quran progress, Ramadan fasts, bookmarks, preferences and the encrypted excused days) and your customer record at RevenueCat. Nothing is kept on our servers.</p>
+  <p><strong>What is deleted:</strong> your account (email, name, account ID), everything backed up or synced with it (all of it encrypted) and your customer record at RevenueCat. Nothing is kept on our servers.</p>
   <p><strong>What is not:</strong> data on your phone stays until you clear the app’s storage or uninstall it. Google Play keeps its own records of your purchases, and deleting your account does not cancel a subscription: cancel it in Google Play under <em>Payments &amp; subscriptions</em>.</p>
 
   <h2>Data retention and security</h2>
-  <p>Account data is kept until you delete your account. Data is encrypted in transit, and each account’s data is protected so only that account can read it.</p>
+  <p>Account data is kept until you delete your account. Data is encrypted in transit, synced data is also end-to-end encrypted, and each account’s data is protected so only that account can access it.</p>
 
   <h2>Children</h2>
   <p>Adahly is a general-audience app and is not directed at children under 13. We do not knowingly collect personal data from children.</p>
